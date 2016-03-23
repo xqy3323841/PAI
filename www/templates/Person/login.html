@@ -1,0 +1,27 @@
+<ion-view class="login" hide-tabs="true">
+	<ion-header-bar>
+		<button class="button button-clear ion-chevron-left" onclick="javascript:history.go(-1);"></button>
+		<div class="h1 title">登录</div>
+	</ion-header-bar>
+	<div class="message">
+		<p><img src="img/Bigicon.png"></p>
+		<div class="input">
+			<div>
+				<a>
+					<i class="icon ion-android-call"></i>
+					<input type="text" placeholder="手机号码"  id="username" ng-model="vm.username"/>
+				</a>
+				<a>
+					<i class="icon ion-locked"></i>
+					<input type="password" placeholder="密码"  id="password" ng-model="vm.password"/>
+				</a>
+				<h6>
+				    <em ng-click="register()">注册账号</em>
+			        <em ng-click="password()">忘记密码</em>
+			    </h6>
+			</div>
+			<button ng-click="login_check()">登录</button>
+		</div>
+	</div>
+	</ion-content>
+</ion-view>

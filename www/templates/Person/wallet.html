@@ -1,0 +1,18 @@
+<ion-view class="wallet" hide-tabs="true">
+  <ion-header-bar>
+    <button class="button button-clear ion-chevron-left" onclick="javascript:history.go(-1);"></button>
+    <div class="h1 title">我的钱包</div>
+  </ion-header-bar>
+  <ion-content>
+    <p>
+      <span>余额：<em>￥{{vm.surplus}}</em></span>
+      <button>充值</button>
+    </p>
+    <ul>
+      <li ng-repeat="item in vm.items">
+          <span>{{item.type}}</span>
+          <span>{{item.or}}￥{{item.Price}}</span>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>

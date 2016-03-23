@@ -1,0 +1,22 @@
+<ion-view hide-tabs="true">
+  <ion-header-bar>
+    <button class="button button-clear ion-chevron-left" onclick="javascript:history.go(-1);"></button>
+    <div class="h1 title">{{vm.item.Title}}</div>
+    <button class="button button-clear ion-images" ng-click="pic()"></button>
+  </ion-header-bar>
+  <ion-content class="detail">
+    <div class="detail-img">
+      <img ng-src="{{vm.item.Preview_Img}}"/>
+    </div>
+    <div class="detail-introduce">
+      <p><strong>商品编号：</strong>{{vm.item.Id}}</p>
+      <p><strong>数&#12288;&#12288;量：</strong>{{vm.item.Number}}羽</p>
+      <p><strong>一&#8194;口&#8194;价：</strong>￥{{vm.item.Price}}</p>
+      <p><strong>赛季血统：</strong><span ng-bind-html="vm.Data"></span></p>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="detail-footer">
+      <button class="footer-gobuy" ng-click="buy()">立即购买</button>
+  </ion-footer-bar>
+</ion-view>
+

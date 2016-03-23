@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.myideaway.cordova.umeng.analytics" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>UMeng Analytics Plugin</name>
+    <description>UMeng analytics for cordova plugin</description>
+    <author>Tommy Chen</author>
+    <keywords>umeng,analytics,cordova</keywords>
+    <license>Apache 2.0 License</license>
+
+    <engines>
+        <engine name="cordova" version="&gt;=4.0"/>
+    </engines>
+    <js-module name="UMengAnalytics" src="www/umeng-analytics.js">
+        <clobbers target="UMengAnalytics"/>
+    </js-module>
+    <!-- android -->
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="UMengAnalyticsPlugin">
+                <param name="android-package" value="com.myideaway.cordova.umeng.analytics.UMengAnalyticsPlugin"/>
+            </feature>
+        </config-file>
+        <config-file parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+        </config-file>
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <meta-data android:name="UMENG_CHANNEL" android:value="Umeng"/>
+        </config-file>
+        <!-- libs -->
+        <source-file src="libs/android/umeng-analytics-v5.6.4.jar" target-dir="libs"/>
+        <!-- src -->
+        <source-file src="src/android/UMengAnalyticsPlugin.java" target-dir="src/com/myideaway/cordova/umeng/analytics"/>
+    </platform>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="UMengAnalyticsPlugin">
+                <param name="ios-package" value="UMengAnalyticsPlugin"/>
+            </feature>
+        </config-file>
+        <!-- libs -->
+        <header-file src="libs/ios/MobClick.h" />
+        <header-file src="libs/ios/MobClickSocialAnalytics.h" />
+        <source-file src="libs/ios/libMobClickLibrary.a" framework="true" />
+        <framework src="libz.tbd" weak="true" />
+        <!-- src -->
+        <header-file src="src/ios/UMengAnalyticsPlugin.h" />
+        <source-file src="src/ios/UMengAnalyticsPlugin.m"/>
+    </platform>
+</plugin>

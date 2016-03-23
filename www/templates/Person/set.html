@@ -1,0 +1,30 @@
+<ion-view class="set" hide-tabs="true">
+  <ion-header-bar>
+    <button class="button button-clear ion-chevron-left" ng-click="back()"></button>
+    <div class="h1 title">个人设置
+      <m-loading></m-loading>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <li>
+      <span>修改头像</span>
+      <p><em><img src="{{vm.avatar}}"></em></p>
+      <i ng-click="setHeadImg()"></i>
+    </li>
+    <li>
+      <span>昵称</span>
+      <p>{{vm.nick}}</p>
+      <i ng-click="goSetNick()"></i>
+    </li>
+    <li>
+      <span>地址</span>
+      <p>{{vm.item.Address}}</p>
+      <i ng-click="goSetAddress()"></i>
+    </li>
+    <li>
+      <span>电话</span>
+      <p>{{vm.item.TelPhone}}</p>
+      <i ng-click="goSetPhone()"></i>
+    </li>
+  </ion-content>
+</ion-view>

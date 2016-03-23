@@ -1,0 +1,67 @@
+<ion-view  class="information" hide-tabs="false">
+  <ion-header-bar class="seckill">
+    <i style="opacity: 0"></i>
+    <p>个人中心
+      <m-loading></m-loading>
+    </p>
+    <span class="ion-ios-gear" style="font-size: 140%;" ng-click="goset()"></span>
+  </ion-header-bar>
+  <ion-content>
+    <ion-refresher  on-refresh="loadData(false)" spinner="dots"></ion-refresher>
+    <div class="person">
+      <div></div>
+      <div>
+        <i><img src="{{vm.Avatar}}"></i>
+        <p>{{vm.nick}}</p>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="person-option">
+      <ul>
+      	<li ng-click="wallet()">
+          <i>
+            <img src="img/wallet.png">
+          </i>我的钱包
+          <span  style="color: #4d5251"><strong>￥{{vm.surplus}}</strong></span>
+          <em></em>
+          <div class="clear"></div>
+        </li>
+        <li ng-click='notes()'>
+            <i>
+              <img src="img/notes.png">
+            </i>
+            <span>购买记录</span>
+            <em></em>
+            <div class="clear"></div>
+        </li>
+        <li ng-click='focus()'>
+          <i>
+            <img src="img/focus.png">
+          </i>
+          <span>我的关注</span>
+          <em></em>
+          <div class="clear"></div>
+        </li>
+        <li ng-click='qualifications()'>
+          <i>
+            <img src="img/pmzg3.png">
+          </i>
+          <span>拍卖资格</span>
+          <span style="color: #4d5251"><strong>{{vm.qualifications}}</strong></span>
+          <div class="clear"></div>
+        </li>
+        <li ng-click="aboutUs()">
+          <i>
+            <img src="img/about.png">
+          </i>
+          <span>关于我们</span>
+          <em></em>
+          <div class="clear"></div>
+        </li>
+      </ul>
+    </div>
+    <div style="margin-top: 20px;margin-bottom: 55px">
+        <a style="display: block;width: 60%;height: 45px;margin: auto;background: #3f6a94;color: #FFFFFF;text-align: center;line-height: 45px;border-radius: 45px;" ng-click="logout()">退出登录</a>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,38 @@
+/* ********** seckill-datail ************** */
+/*.popup{
+  padding:0 3%;
+}
+.popup-title{
+  font-size: 120%;
+}
+.popup-buttons button:first-child{
+  position: absolute;top:0;right:0;background: #f1f0fd;
+}
+.popup-sub-title p{
+  margin:5px 0 0;
+}
+.popup-sub-title p:first-child{
+  margin-top:16px;
+}
+.popup-buttons button i.ion-close-round:before{
+  font-size: 100%;
+}
+.popup-body input{
+  border-radius: 5px;padding:0 5%;border:1px solid #bbb;
+}
+.popup-buttons button:nth-child(1){
+  min-height:50px;max-height:50px;
+}
+.popup-buttons button:nth-child(2){
+  background: #fff;border:1px solid #bbb;color:#bbb;padding:0 32px;min-height:34px;max-height:34px;border-radius: 5px;
+}
+.popup-buttons{
+  margin:0 auto;
+}
+.popup-buttons .button{
+  flex: inherit;text-align: center;
+}*/
+.popup-title{font-size: 110%;font-weight: bold;}
+.popup-body input{padding:0 5%;}
+.button.button-positive {background-color:#3f6594;}
+.button.button-positive.activated{background-color:#3f6594;} 

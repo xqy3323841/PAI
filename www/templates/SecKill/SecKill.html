@@ -1,0 +1,54 @@
+<ion-view view-title="secKill" class="seckill-view" hide-tabs="false">
+  <ion-header-bar class="seckill">
+    <i></i>
+    <p>秒拍鸽子
+      <m-loading></m-loading>
+    </p>
+    <span ng-click="goRule()">规则</span>
+  </ion-header-bar>
+  <ion-content class="pigeon-contents contentIn" style="margin-bottom: 30px" scroll="false">
+    <div class="seckill-title" style="position: inherit;">
+      <div class="active" ng-click="checkFirst()">进行中</div>
+      <div class="" ng-click="checkLast()">即将开始</div>
+      <div class="clear"></div>
+    </div>
+    <ion-scroll style="height: 100%; margin-top: 30px;">
+      <ion-refresher on-refresh="doRefresh()" spinner="dots"></ion-refresher>
+      <div ng-repeat="item in vm.slides[0].items" ng-click="goDetail($index)" class="seckillItem">
+        <p>{{item.Title}}</p>
+        <img ng-src="{{item.Preview_Img}}"/>
+        <span>当前出价:<strong>￥{{item.Price}}</strong></span>
+              <span class="span_2" ng-controller="timeCtrl">倒计时:
+                <em id="hour" ng-bind="item.hour"></em>时
+                <em id="minute" ng-bind="item.minute"></em>分
+              </span>
+        <button ng-click="doSomeThing($index,$event)">{{vm.button}}</button>
+      </div>
+      <ion-infinite-scroll ng-if="vm.moredata" on-infinite="loadMore()"></ion-infinite-scroll>
+    </ion-scroll>
+    <div class="clear"></div>
+  </ion-content>
+  <ion-content class="pigeon-contents contentSoon" style="display: none;margin-bottom: 30px" scroll="false">
+    <div class="seckill-title" style="position: inherit;">
+      <div class="active" ng-click="checkFirst()">进行中</div>
+      <div class="" ng-click="checkLast()">即将开始</div>
+      <div class="clear"></div>
+    </div>
+    <ion-scroll style="height: 100%; margin-top: 30px;">
+      <ion-refresher on-refresh="doRefresh()" spinner="dots"></ion-refresher>
+      <div ng-repeat="item in vm.slides[1].items" ng-click="goDetail($index)" class="seckillItem">
+        <p>{{item.Title}}</p>
+        <img ng-src="{{item.Preview_Img}}"/>
+        <span>当前出价:<strong>￥{{item.Price}}</strong></span>
+              <span class="span_2" ng-controller="timeCtrl">倒计时:
+                <em id="hour1" ng-bind="item.hour"></em>时
+                <em id="minute1" ng-bind="item.minute"></em>分
+              </span>
+        <button ng-click="doSomeThing($index,$event)">{{vm.button1}}</button>
+      </div>
+
+      <ion-infinite-scroll ng-if="vm.moredata" on-infinite="loadMore()"></ion-infinite-scroll>
+    </ion-scroll>
+    <div class="clear"></div>
+  </ion-content>
+</ion-view>

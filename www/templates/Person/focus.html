@@ -1,0 +1,20 @@
+<ion-view view-title="buy" hide-tabs="true">
+  <ion-header-bar>
+    <button class="button button-clear ion-chevron-left" onclick="javascript:history.go(-1);"></button>
+    <div class="h1 title">我的关注
+      <m-loading></m-loading>
+    </div>
+  </ion-header-bar>
+  <ion-content class="buy-content">
+    <ion-refresher on-refresh="doRefresh()" spinner="dots"></ion-refresher>
+    <div ng-repeat="item in vm.items" class="buy-game" ng-click="goDetail($index)">
+      <p>{{item.Title}}</p>
+      <img ng-src="{{item.Preview_Img}}"/>
+      <span>起拍价:<strong>￥{{item.Price}}</strong></span>
+      <button ng-click="removeFollow($index)">移除关注</button>
+    </div>
+    <ion-infinite-scroll ng-if="vm.moredata" on-infinite="loadMore()"></ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>
+

@@ -1,0 +1,11 @@
+<ion-view class="picture-view" hide-tabs="true">
+  <ion-header-bar>
+    <button class="button button-clear ion-chevron-left" onclick="javascript:history.go(-1);"></button>
+    <div class="h1 title">鸽子图集</div>
+  </ion-header-bar>
+  <ion-content class="picture">
+    <div>
+      <img ng-repeat="img in vm.pictures" ng-src="{{img}}">
+    </div>
+  </ion-content>
+</ion-view>

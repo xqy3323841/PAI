@@ -1,0 +1,56 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.pai413118"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.pai413118"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.pai413118"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.pai413118"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.pai413118"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.pai413118"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.pai413118"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.ionicframework.pai413118"
+        },
+        "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "com.ionicframework.pai413118"
+        },
+        "com.myideaway.cordova.umeng.analytics": {
+            "PACKAGE_NAME": "com.myideaway.pigeonauction"
+        },
+        "cn.jpush.phonegap.JPushPlugin": {
+            "API_KEY": "6a37201d514e0d4a89d4def9",
+            "PACKAGE_NAME": "com.myideaway.pigeonauction"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "com.myideaway.pigeonauction"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.pai413118"
+        },
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "com.myideaway.pigeonauction"
+        }
+    }
+}

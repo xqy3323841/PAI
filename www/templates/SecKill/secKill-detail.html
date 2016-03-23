@@ -1,0 +1,34 @@
+<ion-view hide-tabs="true">
+  <ion-header-bar>
+    <button class="button button-clear ion-chevron-left" onclick="javascript:history.go(-1);"></button>
+    <div class="h1 title">{{vm.item.Title}}</div>
+    <button class="button button-clear ion-images" ng-click="pic()"></button>
+  </ion-header-bar>
+  <ion-content class="detail">
+    <div class="detail-img">
+      <img ng-src="{{vm.item.Preview_Img}}"/>
+      <div>
+        <p ng-repeat="person in vm.persons"><span>{{person.Member.Nick}}</span><span>￥{{person.Price}}</span><span>{{person.State}}</span>
+        </p>
+      </div>
+    </div>
+    <div class="detail-introduce">
+      <p><strong>商品编号：</strong>{{vm.item.Id}}</p>
+      <p><strong>数&#12288;&#12288;量：</strong>{{vm.item.Number}}羽</p>
+      <p><strong>开拍时间：</strong>{{vm.item.BeginTime}}</p>
+      <p><strong>结拍时间：</strong>{{vm.item.EndTime}}</p>
+      <p><strong>加价幅度：</strong>￥{{vm.item.MinStepPrice}}</p>
+      <p><strong>当前价格：</strong>￥{{vm.item.Price}}</p>
+      <p><strong>赛季血统：</strong><span ng-bind-html="vm.Data"></span></p>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="detail-footer">
+    <div>
+        <span ng-controller="timeCtrl">倒计时：
+            <em id="hour" ng-bind="vm.item.hour"></em>时
+				    <em id="minute" ng-bind="vm.item.minute"></em>分
+          </span>
+      <button ng-click="price()">出价{{vm.Price}}</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>
